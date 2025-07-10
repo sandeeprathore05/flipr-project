@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flipr Landing Page</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+  <img src="uploads\4th year full stack Assets\Lead Generation Landing page (Images)\logo.svg" alt="Logo" />
+  <!-- <img src="uploads\logo.jpg" alt="logo"> -->
+</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#client">Clients</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Hero Section -->
+  <header class="hero">
+
+    <div class="hero-content">
+      <h1>Consultation, Digital & Marketing </h1>
+      <!-- <button>Get a Free Quote</button> -->
+    </div>
+           <img src="uploads\pexels-brett-sayles-2881232-2.jpg" alt="Hero Image">
+
+    </header>
+
+  
+  <div class="hero">
+  <h3>Not Your Average Realtor
+    <p>Not just another realtor — I’m your strategic partner in every square foot Experience, trust, and results that move you — literally</p>
+  </h3>
+  </div>
+e
+  <!--  Why Choose Us -->
+  <section class="why-us">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+         
+      <div class="feature-box">
+        <img src="uploads\4th year full stack Assets\Lead Generation Landing page (Icons)\home.svg" alt="Hero Image">
+        <h3>potental ROI</h3>
+        <p>Maximize returns, minimize waste — our marketing ensures every investment counts.”
+“We turn your marketing spend into scalable business results.</p>
+      </div>
+      <div class="feature-box">
+        <img src="        uploads\4th year full stack Assets\Lead Generation Landing page (Icons)\paintbrush-2.svg" alt="Hero Image">
+
+        <h3>Design </h3>
+        <p>“We create modern, responsive, and intuitive interfaces that elevate your brand identity.”</p>
+      </div>
+      <div class="feature-box">
+        <img src="uploads\4th year full stack Assets\Lead Generation Landing page (Icons)\circle-dollar-sign.svg">
+        <h3>Marketing</h3>
+        <p>“Our strategies are crafted to maximize reach, drive engagement, and convert leads into loyal customers.”</p>
+      </div>
+    </div>
+  </section>
+   
+  <div class="center-img">
+  <img src="uploads/imagee.png" alt="Centered Image">
+</div>
+
+  <!-- ✅ About Us -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We are a passionate team delivering modern, scalable, and client-focused digital solutions.”
+“From design to deployment, we turn your vision into impactful digital experiences.</p>
+  </section>
+
+  <!-- ✅ Our Projects -->
+  <section class="projects">
+    <h2>Our Projects</h2>
+    <p>We understand what today’s buyers are looking for, and we suggest the right projects that help our clients get top dollar for their homes.</p>
+    <div class="card-container">
+      <% projects.forEach(project => { %>
+        <div class="card">
+          <img src="<%= project.image %>" alt="Project Image">
+          <h3><%= project.name %></h3>
+          <p><%= project.description %></p>
+          <button class="read-more">Read More</button>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- ✅ Happy Clients -->
+  <section class="clients">
+    <h2>Happy Clients</h2>
+    <div class="client-container">
+      <% clients.forEach(client => { %>
+        <div class="client-card">
+          <img src="<%= client.image %>" alt="Client">
+          <p>"<%= client.description %>"</p>
+          <h4><%= client.name %> - <%= client.designation %></h4>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <section  class="why-us">
+
+    <div class="features">
+      <div class="feature-box">
+        <img src="uploads\Ellipse 29.jpg" alt="Hero Image">
+        <p>Maximize returns, minimize waste — our marketing ensures every investment counts.”
+         We turn your marketing spend into scalable business results.</p>
+        <h2>sidharth mehta </h2>
+      </div>
+  
+   <div class="feature-box">
+        <img src="uploads\Ellipse 31.jpg">
+        <p>Our strategies are crafted to maximize reach, drive engagement, and convert leads into loyal customers.”</p>
+        <h2>lucky</h2>
+      </div>
+
+
+      
+    </div>
+  </section>
+   
+
+  <!-- ✅ Contact Form -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form method="POST" action="/contact">
+      <input type="text" name="fullName" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="phone" placeholder="Mobile Number" required>
+      <input type="text" name="city" placeholder="City" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- ✅ Newsletter -->
+  <section class="newsletter">
+    <h2>Subscribe to Newsletter</h2>
+    <form method="POST" action="/subscribe">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Flipr Company. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>Admin Panel</h2>
+
+  <!-- ✅ Add Project -->
+  <h3>Add Project</h3>
+  <form method="POST" action="/admin/project" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Project Name" required>
+    <input type="text" name="description" placeholder="Project Description" required>
+    <input type="file" name="image" required>
+    <button type="submit">Add Project</button>
+  </form>
+
+  <!-- ✅ Add Client -->
+  <h3>Add Client</h3>
+  <form method="POST" action="/admin/client" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Client Name" required>
+    <input type="text" name="description" placeholder="Client Description" required>
+    <input type="text" name="designation" placeholder="Client Designation" required>
+    <input type="file" name="image" required>
+    <button type="submit">Add Client</button>
+  </form>
+
+</body>
+</html>
